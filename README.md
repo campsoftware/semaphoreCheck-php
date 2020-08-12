@@ -2,17 +2,16 @@
 
 ### Summary
 
-Retrieves the GPS coordinates of the Browser.
-- Uses an inline callback.
-- Normalizes the output.
-- Makes the async call **feel** like a sync call, but it's still async.
-- This is a good template for similar async calls.
+Gets a semephore and attempts to aquire to prevent code from running more than one time.
+- Aborts if the semaphore cannot be retrieved.
+- Aborts if the semaphore in use.
+- The key must be an integer.
 
 ### Calling Example
 
 ```javascript
 // Semaphore Check
-$semaphoreKey = \xan\xanAsciiSum( basename( __FILE__ ) );
+$semaphoreKey = 42 );
 $semaphore = sem_get( $semaphoreKey, 1, 0666, 1 );
 if ( $semaphore === false ) {
     $response[ 'Error' ] = 'SEMAPHORE NOT AVAILABLE';
