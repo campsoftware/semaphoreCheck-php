@@ -9,7 +9,7 @@ Gets a semephore and attempts to aquire to prevent code from running more than o
 
 ### Calling Example
 
-```javascript
+```php
 // Semaphore Check
 $semaphoreKey = 42 );
 $semaphore = sem_get( $semaphoreKey, 1, 0666, 1 );
