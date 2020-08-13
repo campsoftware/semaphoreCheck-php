@@ -23,5 +23,5 @@ if ( $semaphore === false ) {
     }
 }
 // Semaphore Release Exclusive Control, but will auto release.
-// $semaphoreReleased = sem_release( $semaphore );
+$semaphoreReleased = sem_release( $semaphore );
 ```
