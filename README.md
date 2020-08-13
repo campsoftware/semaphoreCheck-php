@@ -15,12 +15,10 @@ $semaphoreKey = 42 );
 $semaphore = sem_get( $semaphoreKey, 1, 0666, 1 );
 if ( $semaphore === false ) {
     $response[ 'Error' ] = 'SEMAPHORE NOT AVAILABLE';
-    $aloe_response->content_set( json_encode( $response ) );
     return;
 } else {
     if ( sem_acquire( $semaphore, true ) === false ) {
         $response[ 'Error' ] = 'SEMAPHORE IN USE';
-        $aloe_response->content_set( json_encode( $response ) );
         return;
     }
 }
