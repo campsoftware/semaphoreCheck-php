@@ -7,7 +7,7 @@ Gets a semaphore and attempts to acquire to prevent code from running more than 
 - Aborts if the semaphore in use.
 - The key must be an integer.
 
-### Calling Example
+### Code
 
 ```php
 // Semaphore Check
