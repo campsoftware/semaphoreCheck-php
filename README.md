@@ -2,7 +2,7 @@
 
 ### Summary
 
-Gets a semephore and attempts to aquire to prevent code from running more than one time.
+Gets a semaphore and attempts to acquire to prevent code from running more than one time.
 - Aborts if the semaphore cannot be retrieved.
 - Aborts if the semaphore in use.
 - The key must be an integer.
