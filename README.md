@@ -17,6 +17,7 @@ if ( $semaphore === false ) {
     $response[ 'Error' ] = 'SEMAPHORE NOT AVAILABLE';
     return;
 } else {
+    // Pass true to return false if in use. Omit to pause until not blocked.
     if ( sem_acquire( $semaphore, true ) === false ) {
         $response[ 'Error' ] = 'SEMAPHORE IN USE';
         return;
